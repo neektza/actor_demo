@@ -1,0 +1,47 @@
+:meetup:
+    :polling:
+        :events:
+            :interval: 10
+            :url: "https://api.meetup.com/2/events"
+        :rsvps:
+            :interval: 5
+            :url: "https://api.meetup.com/2/rsvps"
+    :streaming:
+        :rsvps:
+            :url: "https://api.meetup.com/2/rsvps"
+
+
+:github:
+    :data:
+        :token: &token 'c27ac77b9951537a008b1ab2ef8dfe0035fac8c8'
+    :polling:
+        :testy_issues:
+            :interval: 12
+            :repo: 'bithub-test/testy'
+            :url: 'https://api.github.com/repos/bithub-test/testy/issues'
+        :testy_comments:
+            :interval: 6
+            :repo: 'bithub-test/testy'
+            :url: 'https://api.github.com/repos/bithub-test/testy/comments'
+:twitter:
+    :data: 
+        :terms: &default_terms
+            - 'beliebers'
+            - 'javascript'
+            - 'jquery'
+            - 'canjs'
+            - 'stealjs'
+            - 'javascriptmvc'
+            - 'jquerypp'
+            - 'documentjs'
+
+    :streaming:
+        :public:
+            :url: "https://stream.twitter.com/1.1/statuses/filter.json"
+            :terms: *default_terms
+    :polling:
+        :tweet_search:
+            :interval: 4
+            :url: 'https://api.twitter.com/1.1/search/tweets.json'
+            :terms: *default_terms
+
