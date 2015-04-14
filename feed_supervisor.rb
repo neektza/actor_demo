@@ -71,7 +71,4 @@ class FeedSupervisor
   def user_stream?(cfg)
     cfg[:url] =~ /user\.json/
   end
-
-
-
 end
