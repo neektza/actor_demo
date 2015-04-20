@@ -1,26 +1,24 @@
 ruby+actors
 -----------
 
-1. Aktori
-	- high level concurrency apstrakcija
+1. Actors
+	- high level concurrency abstraction
 		* thread:actor != 1:1
-	- concurrent objects/processes, postoje i izvrsavaju se nezavisno
-		* svaki ima svoj state, nista se ne dijeli (idealno)
-		* erlang je immutable, ruby nije
-	- preporuka (concurrency is not parallelism)
+	- concurrent objects/processes, exist and exectute independently
+		* each actor has it's own state, they (ideally) share nothing
+		* erlang has immutable data structures, ruby doesn't (take care of it yourself!)
+	- recomendation - concurrency is not parallelism talk
 
-2. Ruby aktori - Celluloid
-	- OOP aktori - cellovi (Erlang aktori su procesi koji nemaju stanje)
-	- internalije
-		* svaki objekt ima svoj thread
-		* svaki message (method) se vrti u svom fiberu (sto omogucuje suspenziju blocking callova)
-	- erlang filozofija + hrpa ostalih super kul stvari
+2. Ruby Actors - Celluloid
+	- OOP actor = cell, Erlang actors are processes that have no state, Ruby actor have state in for of instance variables
+	- internals:
+		* each object/actor runs in a separate thread
+		* each task is executed in it's own fiber (enables long lasting ops to be suspended)
+	- implements the core erlang ideas:
 		* linking/monitoring
 		* supervisors
-		* supervision groups
+	- some other cool features:
 		* futures
+		* pools
 
-3. Live demo
-	- use case
-	- stari kod
-	- novi kod
+3. Demo ...
